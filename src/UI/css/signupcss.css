@@ -1,0 +1,61 @@
+body {
+  background-image: url("../images/cuadradosblancos.webp");
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Color de fondo similar al de iOS */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formulario-iniciosesion {
+  background-color: #fff; /* Color de fondo del formulario */
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center;
+}
+.formulario-crearcuenta {
+  background-color: #fff; /* Color de fondo del formulario */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

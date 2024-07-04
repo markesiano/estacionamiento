@@ -1,0 +1,2 @@
+[2024-05-28 07:53:50] Incorrect time value: 'NULL' for column 'horaSalida' at row 1
+Consulta SQL: INSERT INTO Estacionamiento (lugar, situacion, cliente, automovil, placas, horaEntrada, horaSalida, fecha) VALUES ('1', '1', 'Jesus Eduardo', 'AMG', '8123-123-123', '23:53:50','NULL' ,DATE_FORMAT(NOW(), '%Y/%m/%d/'))

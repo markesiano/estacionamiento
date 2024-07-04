@@ -1,0 +1,8 @@
+[2024-05-27 14:33:14] Incorrect DATE value: ''
+Consulta SQL: SELECT lugar,
+                         COUNT(automovil) AS numero_automoviles,
+                         SUM(TIME_TO_SEC(TIMEDIFF(horaSalida, horaEntrada))) AS tiempo_total_usado,
+                         GROUP_CONCAT(CONCAT(automovil, ' (', placas, ')') SEPARATOR ', ') AS automoviles
+                  FROM estacionamiento
+                  WHERE fecha = ''
+                  GROUP BY lugar

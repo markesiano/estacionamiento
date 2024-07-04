@@ -1,0 +1,38 @@
+-- Crear la tabla Users
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    id_automovil INT,
+    correo VARCHAR(100)
+);
+
+-- Crear la tabla Automoviles
+CREATE TABLE Automoviles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(50) NOT NULL,
+    placa VARCHAR(20) NOT NULL
+);
+
+-- Crear la tabla Estacionamiento
+CREATE TABLE Estacionamiento (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lugar ENUM('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12') NOT NULL,
+    situacion BOOLEAN NOT NULL,
+    cliente VARCHAR(100) NOT NULL,
+    automovil VARCHAR(50) NOT NULL,
+    placas VARCHAR(20) NOT NULL,
+    horaEntrada DATETIME,
+    horaSalida DATETIME
+);
+
+SELECT 
+    lugar,
+    GROUP_CONCAT(automovil) AS automoviles_estacionados,
+    SEC_TO_TIME(SUM(TIME_TO_SEC(TIMEDIFF(horaSalida, horaEntrada)))) AS tiempo_total_usado,
+    COUNT(*) AS num_automoviles_estacionados
+FROM 
+    estacionamiento
+WHERE 
+    fecha = '2024/05/27' 
+GROUP BY 
+    lugar;

@@ -1,0 +1,231 @@
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+.modal1 {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content1 {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    margin-right: 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el cursor */
+}
+/* Estilos generales */
+body {
+    background-image: url("../images/cuadradosblancos.webp");
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-image: url("../images/hojasdiferentesblancas.png");
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #343a40;
+}
+
+header form {
+    margin: 0;
+}
+
+header button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+header button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el estacionamiento */
+.parking-lot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.parking-row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.parking-spot {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; 
+    height: 115px; 
+    border-radius:  5px;
+    cursor: pointer;
+
+}
+
+.parking-spot .info {
+    display: none;
+    position: absolute;
+    left: 100%; /* Posiciona el div al lado derecho del spot */
+    top: 0; /* Ajusta según sea necesario */
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 24px;
+    white-space: nowrap; /* Evita que el contenido se rompa en varias líneas */
+}
+
+.parking-spot:hover .info {
+    display: block;
+}
+
+/* Estilos para los lugares vacíos */
+.parking-spot.empty {
+    /* Transparente */
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Estilos para los lugares ocupados */
+.parking-spot.occupied {
+    background-image: url('../images/carro.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.from-top.occupied {
+    animation: slideFromTop 5s ease-out;
+}
+
+/* Animation from bottom */
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.from-bottom.occupied {
+    animation: slideFromBottom 5s ease-out;
+}
+/* Estilos para los lugares reservados */
+.parking-spot.reserved {
+    background-image: url('../images/Barrier.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilos para el contenedor de datos del parking */
+.data-parking {
+    margin: 0 auto;
+    background-image: url('../images/parking.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; /* O utiliza 'contain' u otro valor según sea necesario */
+    background-position: center;
+    border-radius: 10px; /* Cambia el valor según el radio de borde deseado */
+    width: 53%;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#datePicker {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

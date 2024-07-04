@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.comments-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.submitResponse {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}   
+
+#submitComment {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.comments-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.comments-section form {
+    margin-bottom: 20px;
+}
+
+.comments-section label {
+    font-weight: bold;
+}
+
+.comments-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comments-section input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comments-section input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.comment-item p {
+    margin: 5px 0;
+}
+
+.response-list {
+    margin-top: 10px;
+}
+
+.response-item {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.response-item p {
+    margin: 0;
+}
+
+.response-item p strong {
+    font-weight: normal;
+}
+
+.response-text {
+    font-size: 90%;
+    color: #666;
+}
+
+.response-form {
+    margin-top: 10px;
+}
+
+.response-form textarea {
+    width: calc(100% - 40px);
+    margin-top: 5px;
+}
+
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comment-item {
+    flex: 0 0 calc(45% - 20px); 
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
